@@ -21,7 +21,7 @@ API Document
     400: **invalidate arguments**
 
 ### Example of code
-```
+```python
 if __name__ == '__main__':
     print(hello world!!!)
 ```
