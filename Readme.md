@@ -111,3 +111,10 @@ bug # 1
 ```Shell
 curl hehhehehhhheh
 ```
+
+
+<code>
+function(req, res) {
+    console.log("hello world!");
+}
+</code>
