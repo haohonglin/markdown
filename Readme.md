@@ -21,7 +21,8 @@ API Document
     400: **invalidate arguments**
 
 ### Example of code
-```Hello world
+```
+Hello world
 jafalkfjlajfja
 klfjalkfjlajfljalf
 ```
