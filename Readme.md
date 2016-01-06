@@ -75,6 +75,6 @@ int main()
 
 
 **Add command line:**
-```
-curl -X POST http://api.dev.hrmes.tv/v1/infos/programs.json
+```bash
+$ curl -X POST http://api.dev.hrmes.tv/v1/infos/programs.json
 ```
