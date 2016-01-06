@@ -36,5 +36,11 @@ if __name__ == '__main__':
 |afafafaf|ssssss|
 
 
+|name|salary|
+|:----|-----:|
+|haohao|100|
+|alien|200|
+|cherrious|300000|
+
 _hello_ world
 *hello* world
