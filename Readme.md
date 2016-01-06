@@ -28,8 +28,6 @@ if __name__ == '__main__':
 ~~dadfafaf~~
 
 hhhhhh|jajfkajfaf
------------------
+--------|--------
 hhhhafa|afafafafa
------------------
 afafafaf|
------------------
