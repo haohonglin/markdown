@@ -30,7 +30,7 @@ if __name__ == '__main__':
 **列表**
 
 ### *列表*
-hhhhhh|jajfkajfaf
---------|--------
-hhhhafa|afafafafa
-afafafaf|ssssss
+|hhhhhh|jajfkajfaf|
+|--------|--------|
+|hhhhafa|afafafafa|
+|afafafaf|ssssss|
