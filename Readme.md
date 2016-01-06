@@ -63,7 +63,7 @@ http://hrmes.net/
 3. b
 
 
-'''C
+```C
 #include <stdio.h>
 
 int main()
@@ -71,4 +71,4 @@ int main()
     # this is a comment embed in the c code. babababbbabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
     println('helloworld');
 }
-'''
+```
