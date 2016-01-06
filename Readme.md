@@ -61,3 +61,14 @@ http://hrmes.net/
 2. b
     1. jjalfjlajflj
 3. b
+
+
+'''C
+#include <stdio.h>
+
+int main()
+{
+    # this is a comment embed in the c code. babababbbabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+    println('helloworld');
+}
+'''
