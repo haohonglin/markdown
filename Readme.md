@@ -82,4 +82,4 @@ $ curl -X POST http://api.dev.hrmes.tv/v1/infos/programs.json
 Reference-style:
     ![alt text][logo]
 
-[logo]: http://static.dev.hrmes.tv/content/shares/logo.png
+[logo]: http://static.cn.hyku.tv/content/shares/logo.png
