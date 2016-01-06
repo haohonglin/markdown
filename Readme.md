@@ -22,8 +22,7 @@ API Document
 
 ### Example of code
 ```
-Hello world
-jafalkfjlajfja
-klfjalkfjlajfljalf
+if __name__ == '__main__':
+    print(hello world!!!)
 ```
 ~~dadfafaf~~
