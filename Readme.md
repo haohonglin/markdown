@@ -22,11 +22,11 @@ API Document
 
 ### Example of code
 
-`
+'
 #include<stdio.h>
 
 int main()
 {
     println('helloworld!!!');
 }
-`
+'
