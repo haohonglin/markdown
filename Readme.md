@@ -21,12 +21,4 @@ API Document
     400: **invalidate arguments**
 
 ### Example of code
-
-'
-#include<stdio.h>
-
-int main()
-{
-    println('helloworld!!!');
-}
-'
+`Hello world.`
