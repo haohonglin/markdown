@@ -25,7 +25,6 @@ API Document
 if __name__ == '__main__':
     print(hello world!!!)
 ```
-~~dadfafaf~~
 
 **列表**
 
@@ -44,3 +43,5 @@ if __name__ == '__main__':
 
 _hello_ world
 *hello* world
+
+http://hrmes.net/
