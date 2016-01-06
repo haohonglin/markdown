@@ -83,3 +83,13 @@ Reference-style:
     ![alt text][logo]
 
 [logo]: http://static.cn.hyku.tv/content/shares/logo.png
+
+
+Blockquotes
+> heheheheheehhe
+> aahehheheheheh
+
+Quote break.
+
+> afafafafaf
+> afafafafaf
