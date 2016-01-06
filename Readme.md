@@ -19,3 +19,14 @@ API Document
 *Return*:
     200: **successfully!**
     400: **invalidate arguments**
+
+### Example of code
+
+`
+#include<stdio.h>
+
+int main()
+{
+    println('helloworld!!!');
+}
+`
