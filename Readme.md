@@ -112,6 +112,14 @@ bug # 1
 curl hehhehehhhheh
 ```
 
+```C
+#include<stdio.h>
+
+void main()
+{
+    println("helloworld!!!");
+}
+```
 
 <code>
 function(req, res) {
