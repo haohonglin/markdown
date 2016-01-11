@@ -27,15 +27,14 @@
     CONTENT_LENGTH_MAX = 10000
     REPLY_LENGTH_MAX = 100 
 
-*新增加的参数
-* 字符串长度按字符还是字节算？哪个方便用哪个
-* 还有一些常数，详见 config.yaml
 
 * 返回值时 json 时 Content-Type 设为 application/json; charset=UTF-8
 * 返回值里的时间戳都是自 Unix epoch 的毫秒数，所有时间都是 UTC
 
 * 下列API分成三个部分, 每部分对应一个Domain, API和Domain的对应关系请看文档api_domain_map.txt
 * 我们在下列API上加上前缀/v1/作为 version 1.0 的API
+
+---
 
 账户
 ====
@@ -681,7 +680,6 @@ Action: 获取用户的消息，按时间倒序排列。目前返回全部消息
         r               回复 ID
         time            该消息产生时间
 ```
----
 
 静态内容
 ========
@@ -729,7 +727,6 @@ Action: 返回指定节目的收藏列表
         t       主题 ID
         time    收藏时间戳
 ```
----
 
 用户反馈
 =========
@@ -774,7 +771,6 @@ Properties:
          relation                0 = 无关注关系 ， 1 = 我已经关注的ID , 2 = 关注我的ID , 3 = 双向关注关系
     more                        之后是否有更多
 ```
----
 
 论坛
 ====
@@ -874,7 +870,6 @@ Action: 返回指定主题指定帖子开始的 THREAD_PAGE_SIZE 个论坛主题
 ```
 ---
 ```
-*API V1.1 UPGRADE*
 URL: /new_reply2
 Domain: api.dev.hrmes.tv/v1/forums
 Method: POST
@@ -1012,8 +1007,6 @@ Action: 返回指定主题指定帖子结束的 REPLY_PAGE_SIZE 条回复以及�
 ```
 ---
 ```
-
-
 URL: /like
 Domain: api.dev.hrmes.tv/v1/forums
 Method: POST
@@ -1026,7 +1019,9 @@ Action: 对指定内容点赞。给参数 t 时对帖子或静态内容点赞，
 Response:
         (1) 返回 200，忽略重复点赞之类的错误。App 会忽略这个响应。
 
-
+```
+---
+```
 URL: /unlike
 Domain: api.dev.hrmes.tv/v1/forums
 Method: POST
@@ -1125,7 +1120,7 @@ Action: 查询竞猜结果
 ```
 ---
 ```
-URL: /new_vote (/v1/new_vote)
+URL: /new_vote
 Domain: api.dev.hrmes.tv/v1/maintains
 Method: POST
 Parameter:
@@ -1199,7 +1194,7 @@ Action: 获取某个投票的结果
 ```
 ---
 ```
-URL: /new_vote_cheer (/v1/new_vote_cheer)
+URL: /new_vote_cheer
 Domain: api.dev.hrmes.tv/v1/maintains
 Method: POST
 Parameter:
@@ -1245,7 +1240,6 @@ Action: 获取某个投票的结果
     response 200
     返回结果与 /v1/vote 相同
 ```
----
 
 
 管理员API
