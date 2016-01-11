@@ -1259,3 +1259,69 @@ Action: 创建一个新的管理员用户，用户名密码由query发起者指�
 (1) 成功
     response: 200
 ```
+---
+```
+URL: /new_vote_cheer
+Domain: api.dev.hrmes.tv/v1/maintains
+Method: POST
+Parameter:
+    username
+    session
+    t                   对应同步内容 ID
+    choices             JSON 格式字符串数组，投票选项列表
+Action: 为某个同步内容创建对应投票
+(1) 成功
+    response 200
+注：需要管理员权限。
+```
+---
+```
+URL: /new_vote
+Domain: api.dev.hrmes.tv/v1/maintains
+Method: POST
+Parameter:
+    username
+    session
+    t                   对应同步内容 ID
+    choices             JSON 格式字符串数组，投票选项列表
+Action: 为某个同步内容创建对应投票
+(1) 成功
+    response 200
+注：需要管理员权限。
+```
+---
+```
+URL: /new_program
+Domain: api.dev.hrmes.tv/v1/maintains
+Method: POST
+Parameters:
+    username            管理员帐号用户名
+    password
+    name                节目名称
+    parent              可选。为整个节目创建 ID 时为空，为某一期节目(episode) 创建 ID 时为整个节目的 ID
+Action: 创建新的节目，需要管理员账户和密码
+(1) 成功
+    response: 200
+    properties:
+        p:              节目 ID
+注：需要管理员权限。
+```
+---
+```
+URL: /new_info_thread
+Domain: api.dev.hrmes.tv/v1/maintains
+Method: POST
+Parameters:
+    username            管理员用户名
+    session
+    p                   节目 ID
+    name                新建同步内容名称，用于生成该内容下用户间回复产生的消息
+Action: 创建新的同步内容主题。
+(1) 节目不存在
+    response: 403
+(2) 成功，返回同步内容 id
+    response: 200
+    data example:
+        {'t': "xxx"}
+注：需要管理员权限。
+```
