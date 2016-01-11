@@ -70,6 +70,7 @@ Action: 注册邮箱，生成新的 session
 ```
 ---
 
+```
 URL: /login_email
 Domain: api.dev.hrmes.tv/v1/users
 Method: POST
@@ -113,8 +114,9 @@ Action: 使用邮箱及密码登陆
         weibo_name  String          绑定的微博用户名，可选
         weixin_uid  String          绑定的微信用户 id，可选
         weixin_name String          绑定的微信用户名，可选
-
-
+```
+---
+```
 URL: /login_weibo
 Domain: api.dev.hrmes.tv/v1/users
 Method: POST
@@ -130,8 +132,11 @@ Action: 使用微博帐号登录
 (1) 成功
     response: 200
     data 同 /v1/login_email 返回值
+```
 
+---
 
+```
 URL: /login_weixin
 Domain: api.dev.hrmes.tv/v1/users
 Method: POST
@@ -140,8 +145,11 @@ Parameters:
     device          String  可选，设备 ID
     device_model    String  可选，设备型号
 Action: 使用微信帐号登录，返回值同/v1/login_weibo
+```
 
+---
 
+```
 URL: /bind_email
 Domain: api.dev.hrmes.tv/v1/users
 Method: POST
@@ -166,8 +174,9 @@ Action: 为用户绑定邮箱，生成新的 session
     (3) 成功
         response: 200
         data 同 /v1/login_email 返回值
-
-
+```
+---
+```
 URL: /bind_weibo
 Domain: api.dev.hrmes.tv/v1/users
 Method: POST
@@ -193,8 +202,9 @@ Action: 绑定微博账号
         response: 200
         data example:
         返回值和/v1/login_weibo 相同
-
-
+```
+---
+```
 URL: /bind_weixin
 Domain: api.dev.hrmes.tv/v1/users
 Method: POST
@@ -214,8 +224,9 @@ Parameters:
 Action: 解绑微博账号
     (1) 成功
         response: 200
-
-
+```
+---
+```
 URL: /unbind_weixin
 Domain: api.dev.hrmes.tv/v1/users
 Method: POST
@@ -239,7 +250,9 @@ Parameters:
 Action: 更新用户信息，其中包括 gender, birthday, location, signature
 (1) 成功
     response: 200
-
+```
+---
+```
 URL: /userinfo
 Domain: api.dev.hrmes.tv/v1/users
 Method: GET
@@ -271,8 +284,9 @@ Action: 获取任一用户信息
         following_count         Int     关注用户数
         followed_count          Int     被关注用户数
         follow_me (可选)        Bool    该用户是否关注请求发起者（请求参数 me），未给定参数 me 时返回值无此字段
-
-
+```
+---
+```
 URL: /check_friend
 Domain: api.dev.hrmes.tv/v1/users
 Method: GET
@@ -288,9 +302,9 @@ Action: 判断两个人是否为好友
     }
     properties:
         is_friend (可选)        Bool      表示两个用户是否为好友
-
-
-
+```
+---
+```
 URL: /getback_password
 Domain: api.dev.hrmes.tv/v1/users
 Method: POST
@@ -305,8 +319,9 @@ Action: 找回密码， server 发送新密码到用户email
     response: 200
     data example:
         {}
-
-
+```
+---
+```
 URL: /reset_password
 Domain: api.dev.hrmes.tv/v1/users
 Method: POST
@@ -327,8 +342,9 @@ Action: 更改用户的密码，并更新和返回user的session
     response: 200
     data example:
         {'session':new session}
-
-
+```
+---
+```
 URL: /bind_push
 Domain: api.dev.hrmes.tv/v1/users
 Method: POST
@@ -340,8 +356,9 @@ Parameters:
 Action: 绑定推送信息，以接收单点推送
 (1) 成功
     response: 200
-
-
+```
+---
+```
 URL: /follow
 Domain: api.dev.hrmes.tv/v1/users
 Method: POST
@@ -352,8 +369,9 @@ Parameter:
 Action: 关注 username 为 target 的用户
 Response:
     200，即使 target 用户已经被关注了
-
-
+```
+---
+```
 URL: /unfollow
 Domain: api.dev.hrmes.tv/v1/users
 Method: POST
@@ -364,8 +382,9 @@ Parameter:
 Action: 取消关注 username 为 target 的用户
 Response:
     200，即使 target 用户并没有被关注
-
-
+```
+---
+```
 URL: /following_list
 Domain: api.dev.hrmes.tv/v1/users
 Method: GET
@@ -395,8 +414,9 @@ Response:
             profile_image (可选)   mZ用户头像            
             follow_me (可选)        该用户是否关注请求发起者（请求参数 me），未给定参数 me 时返回值无此字段
             more                        之后是否有更多
-
-
+```
+---
+```
 URL: /followed_list
 Domain: api.dev.hrmes.tv/v1/users
 Method: GET
@@ -407,8 +427,9 @@ Parameter:
 Action: 获得指定用户的被关注列表，按创建时间从新到旧排序
 Response:
         格式同 /following_list
-
-
+```
+---
+```
 URL: /relation
 Domain: api.dev.hrmes.tv/v1/users
 Method: GET
@@ -423,8 +444,9 @@ Response:
             'follow' : Bool,   #True 表示me关注了username
             'followed': Bool,  # True 表示username 关注了 me
         }
-
-
+```
+---
+```
 URL: /friends
 Domain: api.dev.hrmes.tv/v1/users
 Method: GET
@@ -445,8 +467,10 @@ Example:
             username                用户名 
             nick                    昵称
             profile_image (可选)    用户头像
+```
+---
 
-
+```
 URL: /upload_pushclientid
 Domain: api.dev.hrmes.tv/v1/users
 Method: POST
@@ -458,8 +482,9 @@ Parameter:
 Action: 上传用户对应的个推client id
     (1) 成功
         response: 200
-
-
+```
+---
+```
 URL: /query_unread_count
 Domain: api.dev.hrmes.tv/v1/users
 Method: GET
@@ -481,8 +506,9 @@ Action: 上传用户对应的个推client id
             'reply'     回复通知未读消息数
             ‘follow’    粉丝通知唯独消息数
             ‘like’        点赞通知唯独消息数
-
-
+```
+---
+```
 URL: /delete_notification
 Domain: api.dev.hrmes.tv/v1/users
 Method: POST
@@ -494,8 +520,9 @@ Parameter:
 Action: 上传用户对应的个推client id
     (1) 成功
         {response:200}
-
-
+```
+---
+```
 URL: /messages/follow
 Domain: api.dev.hrmes.tv/v1/users
 Method: GET
@@ -535,8 +562,9 @@ Action: 获取用户的消息，按时间倒序排列。目前返回全部消息
         detail          消息内容
         rstatus       消息是否已读 （0表示未读，1表示已读）
         time            该消息产生时间
-
-
+```
+---
+```
 URL: /messages/reply
 Domain: api.dev.hrmes.tv/v1/users
 Method: GET
@@ -593,8 +621,9 @@ Action: 获取用户的消息，按时间倒序排列。目前返回全部消息
                         对于 replyForum 类型或者threadForum，为所在主题帖 ID
         r               回复 ID
         time            该消息产生时间
-
-
+```
+---
+```
 URL: /messages/like
 Domain: api.dev.hrmes.tv/v1/users
 Method: GET
@@ -651,11 +680,12 @@ Action: 获取用户的消息，按时间倒序排列。目前返回全部消息
                         对于 replyForum 类型或者threadForum，为所在主题帖 ID
         r               回复 ID
         time            该消息产生时间
-
+```
+---
 
 静态内容
 ========
-
+```
 URL: /favor
 Domain: api.dev.hrmes.tv/v1/users
 Method: POST
@@ -667,8 +697,9 @@ Parameter:
 Action: 收藏指定静态内容
 (1) 成功
     response: 200
-
-
+```
+---
+```
 URL: /unfavor
 Domain: api.dev.hrmes.tv/v1/users
 Method: POST
@@ -679,8 +710,9 @@ Parameter:
 Action: 取消收藏指定静态内容
 (1) 成功
     response: 200
-
-
+```
+---
+```
 URL: /favorite
 Domain: api.dev.hrmes.tv/v1/users
 Method: POST
@@ -696,11 +728,12 @@ Action: 返回指定节目的收藏列表
         p       节目 ID
         t       主题 ID
         time    收藏时间戳
-
+```
+---
 
 用户反馈
 =========
-
+```
 URL: /feedback
 Domain: api.dev.hrmes.tv/v1/users
 Method: POST
@@ -711,8 +744,9 @@ Parameter:
 Action: 用户反馈意见
 (1) 成功
     response: 200
-
-
+```
+---
+```
 URL: /search_user
 Domain: api.dev.hrmes.tv/v1/users
 Method: GET  
@@ -739,10 +773,12 @@ Properties:
          profile_image           用户头像
          relation                0 = 无关注关系 ， 1 = 我已经关注的ID , 2 = 关注我的ID , 3 = 双向关注关系
     more                        之后是否有更多
-
+```
+---
 
 论坛
 ====
+```
 URL: /new_program
 Domain: api.dev.hrmes.tv/v1/maintains
 Method: POST
@@ -757,7 +793,9 @@ Action: 创建新的节目，需要管理员账户和密码
     properties:
         p:              节目 ID
 注：需要管理员权限。
-
+```
+---
+```
 *全局的行为，不一定要和用户绑定，故不需要用户名和密码
 URL: /new_thread
 Domain: api.dev.hrmes.tv/v1/forums
@@ -775,8 +813,9 @@ Action: 发表新论坛主题帖子
     response: 200
     properties:
         t:              帖子 ID
-
-
+```
+---
+```
 URL: /new_info_thread
 Domain: api.dev.hrmes.tv/v1/maintains
 Method: POST
@@ -793,8 +832,9 @@ Action: 创建新的同步内容主题。
     data example:
         {'t': "xxx"}
 注：需要管理员权限。
-
-
+```
+---
+```
 URL: /threads
 Domain: api.dev.hrmes.tv/v1/forums
 Method: GET
@@ -831,8 +871,9 @@ Action: 返回指定主题指定帖子开始的 THREAD_PAGE_SIZE 个论坛主题
         reply_count                 回复数
         like                        点赞数
         replies                     列表， 格式和/replies22相同
-
-
+```
+---
+```
 *API V1.1 UPGRADE*
 URL: /new_reply2
 Domain: api.dev.hrmes.tv/v1/forums
@@ -855,8 +896,9 @@ Action: 发表回复，并返回该条回复及之前相邻的若干条
             'more': true
         }
     格式与 /replies2 相同，其中 more 表示返回的列表之前是否还有更多回复
-
-
+```
+---
+```
 URL: /replies2
 Domain: api.dev.hrmes.tv/v1/forums
 Method: GET
@@ -903,8 +945,9 @@ Action: 返回指定主题指定帖子开始或结束的 REPLY_PAGE_SIZE 条回�
         more                        布尔值。
                                     无 start 参数但有 end 参数时，表示返回列表之前是否有更多回复。
                                     其他情况表示返回列表之后是否有更多回复。
-    
-
+``` 
+---
+```
 URL: /replies/hot_new
 Domain: api.dev.hrmes.tv/v1/forums
 Method: GET  
@@ -945,8 +988,9 @@ properties:
             reply_to_nick (可选)    被回复用户昵称
             like                    点赞数
         more                        布尔值。
-
-
+```
+---
+```
 URL: /replies_and_thread2
 Domain: api.dev.hrmes.tv/v1/forums
 Method: GET
@@ -965,6 +1009,9 @@ Action: 返回指定主题指定帖子结束的 REPLY_PAGE_SIZE 条回复以及�
         thread          主贴内容，格式同 /threads2 返回值中的一项，其中的 replies 域为 []
         replies         指定回复列表，格式同 /replies2 返回值中回复列表
         more            回复列表之前是否有更多回复
+```
+---
+```
 
 
 URL: /like
@@ -991,10 +1038,12 @@ Parameter:
 Action: 对指定内容取消点赞。参数要求同/v1/like
 Response:
         (1) 返回 200
-
+```
+---
 
 投票
 ==========
+```
 URL: /guess
 Domain: api.dev.hrmes.tv/v1/votes
 Method: POST
@@ -1016,8 +1065,9 @@ Action: 进行竞猜
             'c': 871
         }
     }
-
-
+```
+---
+```
 URL: /guess
 Domain: api.dev.hrmes.tv/v1/votes
 Method: GET
@@ -1038,8 +1088,9 @@ Action: 查询竞猜结果
             'c': 871
         }
     }
-
-
+```
+---
+```
 URL: /guess/all
 Domain: api.dev.hrmes.tv/v1/votes
 Method: GET
@@ -1071,8 +1122,9 @@ Action: 查询竞猜结果
                     }
                 }
         }
-
-
+```
+---
+```
 URL: /new_vote (/v1/new_vote)
 Domain: api.dev.hrmes.tv/v1/maintains
 Method: POST
@@ -1085,8 +1137,9 @@ Action: 为某个同步内容创建对应投票
 (1) 成功
     response 200
 注：需要管理员权限。
-
-
+```
+---
+```
 URL: /vote
 Domain: api.dev.hrmes.tv/v1/votes
 Method: POST
@@ -1108,8 +1161,9 @@ Action: 进行投票
             'c': 871
         }
     }
-
-
+```
+---
+```
 URL: /vote
 Domain: api.dev.hrmes.tv/v1/votes
 Method: GET
@@ -1130,8 +1184,9 @@ Action: 进行投票
             'c': 871
         }
     }
-
-
+```
+---
+```
 URL: /vote_result
 Domain: api.dev.hrmes.tv/v1/votes
 Method: GET
@@ -1141,8 +1196,9 @@ Action: 获取某个投票的结果
 (1) 成功
     response 200
     返回结果与 /v1/vote 相同
-
-
+```
+---
+```
 URL: /new_vote_cheer (/v1/new_vote_cheer)
 Domain: api.dev.hrmes.tv/v1/maintains
 Method: POST
@@ -1155,8 +1211,9 @@ Action: 为某个同步内容创建对应投票
 (1) 成功
     response 200
 注：需要管理员权限。
-
-
+```
+---
+```
 URL: /vote_cheer
 Domain: api.dev.hrmes.tv/v1/votes
 Method: POST
@@ -1175,8 +1232,9 @@ Action: 进行投票
             'b': 912,
             'c': 871
         }
-
-
+```
+---
+```
 URL: /vote_cheer_result
 Domain: api.dev.hrmes.tv/v1/votes
 Method: GET
@@ -1186,10 +1244,13 @@ Action: 获取某个投票的结果
 (1) 成功
     response 200
     返回结果与 /v1/vote 相同
+```
+---
 
 
 管理员API
 ===========================================
+```
 URL: /register_admin (仅用于debug和测试)
 Domain: api.dev.hrmes.tv/v1/maintains
 Method: POST
@@ -1199,3 +1260,4 @@ Parameters:
 Action: 创建一个新的管理员用户，用户名密码由query发起者指定
 (1) 成功
     response: 200
+```
