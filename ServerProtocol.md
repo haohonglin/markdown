@@ -75,7 +75,6 @@ Action: 注册邮箱，生成新的 session
         data 同 /v1/login_email 返回值
 ```
 ---
-<span id="jump">Hello World</span>
 ```
 URL: /login_email
 Domain: api.dev.hrmes.tv/v1/users
@@ -139,9 +138,7 @@ Action: 使用微博帐号登录
     response: 200
     data 同 /v1/login_email 返回值
 ```
-
 ---
-
 ```
 URL: /login_weixin
 Domain: api.dev.hrmes.tv/v1/users
@@ -152,9 +149,7 @@ Parameters:
     device_model    String  可选，设备型号
 Action: 使用微信帐号登录，返回值同/v1/login_weibo
 ```
-
 ---
-
 ```
 URL: /bind_email
 Domain: api.dev.hrmes.tv/v1/users
@@ -220,7 +215,9 @@ Parameters:
     code
 Action: 绑定微信
     返回值跟/v1/bind_weibo 一样
-
+```
+---
+```
 URL: /unbind_weibo
 Domain: api.dev.hrmes.tv/v1/users
 Method: POST
@@ -242,7 +239,9 @@ Parameters:
 Action: 解绑微信账号
     (2) 成功
         response: 200
-
+```
+---
+```
 URL: /update_userinfo
 Domain: api.dev.hrmes.tv/v1/users
 Method: POST
@@ -475,7 +474,6 @@ Example:
             profile_image (可选)    用户头像
 ```
 ---
-
 ```
 URL: /upload_pushclientid
 Domain: api.dev.hrmes.tv/v1/users
@@ -1041,7 +1039,6 @@ Action: 对指定内容取消点赞。参数要求同/v1/like
 Response:
         (1) 返回 200
 ```
----
 
 投票
 ==========
