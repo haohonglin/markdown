@@ -81,6 +81,7 @@ Action: 注册邮箱，生成新的 session
 ```
 ---
 邮箱登录
+---
 ```
 URL: /login_email
 Domain: api.dev.hrmes.tv/v1/users
@@ -160,6 +161,8 @@ Parameters:
 Action: 使用微信帐号登录，返回值同/v1/login_weibo
 ```
 ---
+邮箱绑定
+---
 ```
 URL: /bind_email
 Domain: api.dev.hrmes.tv/v1/users
@@ -186,6 +189,8 @@ Action: 为用户绑定邮箱，生成新的 session
         response: 200
         data 同 /v1/login_email 返回值
 ```
+---
+微博绑定
 ---
 ```
 URL: /bind_weibo
@@ -215,6 +220,8 @@ Action: 绑定微博账号
         返回值和/v1/login_weibo 相同
 ```
 ---
+微信绑定
+---
 ```
 URL: /bind_weixin
 Domain: api.dev.hrmes.tv/v1/users
@@ -226,6 +233,8 @@ Parameters:
 Action: 绑定微信
     返回值跟/v1/bind_weibo 一样
 ```
+---
+微博解绑
 ---
 ```
 URL: /unbind_weibo
@@ -239,6 +248,8 @@ Action: 解绑微博账号
         response: 200
 ```
 ---
+微信解绑
+---
 ```
 URL: /unbind_weixin
 Domain: api.dev.hrmes.tv/v1/users
@@ -250,6 +261,8 @@ Action: 解绑微信账号
     (2) 成功
         response: 200
 ```
+---
+用户信息更新
 ---
 ```
 URL: /update_userinfo
@@ -266,6 +279,8 @@ Action: 更新用户信息，其中包括 gender, birthday, location, signature
 (1) 成功
     response: 200
 ```
+---
+用户信息查询
 ---
 ```
 URL: /userinfo
@@ -301,6 +316,8 @@ Action: 获取任一用户信息
         follow_me (可选)        Bool    该用户是否关注请求发起者（请求参数 me），未给定参数 me 时返回值无此字段
 ```
 ---
+好友关系检查
+---
 ```
 URL: /check_friend
 Domain: api.dev.hrmes.tv/v1/users
@@ -319,6 +336,8 @@ Action: 判断两个人是否为好友
         is_friend (可选)        Bool      表示两个用户是否为好友
 ```
 ---
+找回密码
+---
 ```
 URL: /getback_password
 Domain: api.dev.hrmes.tv/v1/users
@@ -335,6 +354,8 @@ Action: 找回密码， server 发送新密码到用户email
     data example:
         {}
 ```
+---
+重置密码
 ---
 ```
 URL: /reset_password
@@ -359,6 +380,8 @@ Action: 更改用户的密码，并更新和返回user的session
         {'session':new session}
 ```
 ---
+个推绑定
+---
 ```
 URL: /bind_push
 Domain: api.dev.hrmes.tv/v1/users
@@ -373,6 +396,8 @@ Action: 绑定推送信息，以接收单点推送
     response: 200
 ```
 ---
+关注
+---
 ```
 URL: /follow
 Domain: api.dev.hrmes.tv/v1/users
@@ -386,6 +411,8 @@ Response:
     200，即使 target 用户已经被关注了
 ```
 ---
+取消关注
+---
 ```
 URL: /unfollow
 Domain: api.dev.hrmes.tv/v1/users
@@ -398,6 +425,8 @@ Action: 取消关注 username 为 target 的用户
 Response:
     200，即使 target 用户并没有被关注
 ```
+---
+关注列表
 ---
 ```
 URL: /following_list
@@ -431,6 +460,8 @@ Response:
             more                        之后是否有更多
 ```
 ---
+被关注列表
+---
 ```
 URL: /followed_list
 Domain: api.dev.hrmes.tv/v1/users
@@ -443,6 +474,8 @@ Action: 获得指定用户的被关注列表，按创建时间从新到旧排序
 Response:
         格式同 /following_list
 ```
+---
+关系查询
 ---
 ```
 URL: /relation
@@ -460,6 +493,8 @@ Response:
             'followed': Bool,  # True 表示username 关注了 me
         }
 ```
+---
+好友列表
 ---
 ```
 URL: /friends
@@ -483,6 +518,8 @@ Example:
             nick                    昵称
             profile_image (可选)    用户头像
 ```
+---
+个推id绑定
 ---
 ```
 URL: /upload_pushclientid
