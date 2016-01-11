@@ -35,7 +35,7 @@
 * 我们在下列API上加上前缀/v1/作为 version 1.0 的API
 
 * server 主要有以下几个模块：
-1. [jump](#jump)
+1. [jump](#论坛)
 2. #论坛
 ---
 
