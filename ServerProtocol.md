@@ -34,7 +34,11 @@
 * 下列API分成三个部分, 每部分对应一个Domain, API和Domain的对应关系请看文档api_domain_map.txt
 * 我们在下列API上加上前缀/v1/作为 version 1.0 的API
 
+* server 主要有以下几个模块：
+1. # 帐号
+2. # 论坛
 ---
+
 
 账户
 ====
