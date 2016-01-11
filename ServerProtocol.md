@@ -47,6 +47,7 @@
 
 账户
 ====
+** 邮箱注册
 ```
 URL: /register_email
 Domain: api.dev.hrmes.tv/v1/users
