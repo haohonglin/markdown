@@ -80,6 +80,7 @@ Action: 注册邮箱，生成新的 session
         data 同 /v1/login_email 返回值
 ```
 ---
+邮箱登录
 ```
 URL: /login_email
 Domain: api.dev.hrmes.tv/v1/users
@@ -126,6 +127,8 @@ Action: 使用邮箱及密码登陆
         weixin_name String          绑定的微信用户名，可选
 ```
 ---
+微博登录
+---
 ```
 URL: /login_weibo
 Domain: api.dev.hrmes.tv/v1/users
@@ -143,6 +146,8 @@ Action: 使用微博帐号登录
     response: 200
     data 同 /v1/login_email 返回值
 ```
+---
+微信登录
 ---
 ```
 URL: /login_weixin
