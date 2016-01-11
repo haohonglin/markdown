@@ -1,3 +1,6 @@
+简介
+====
+
 * App 里有三部分会和服务端通信：账号系统，论坛，静态内容
     账号系统：
         首次打开 App 会向服务器请求创建一个账号，随机用户名及密码。
@@ -22,7 +25,9 @@
     THREAD_PAGE_SIZE = 20
     REPLY_PAGE_SIZE = 30
     CONTENT_LENGTH_MAX = 10000
-    REPLY_LENGTH_MAX = 100 *新增加的参数
+    REPLY_LENGTH_MAX = 100 
+
+*新增加的参数
 * 字符串长度按字符还是字节算？哪个方便用哪个
 * 还有一些常数，详见 config.yaml
 
@@ -34,6 +39,7 @@
 
 账户
 ====
+```
 URL: /register_email
 Domain: api.dev.hrmes.tv/v1/users
 Method: POST
@@ -61,7 +67,8 @@ Action: 注册邮箱，生成新的 session
         response: 200
         data example:
         data 同 /v1/login_email 返回值
-
+```
+---
 
 URL: /login_email
 Domain: api.dev.hrmes.tv/v1/users
